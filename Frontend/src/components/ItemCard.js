@@ -7,7 +7,7 @@ import {Card} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 
-const ItemCard = ({ id, name, description, price}) => {
+const ItemCard = ({ id, name, description, price, stock}) => {
     return (
         <>
             <Card border="secondary" style={{padding:10, margin: 'auto', marginBottom: 10, maxWidth:500}}>
@@ -17,6 +17,7 @@ const ItemCard = ({ id, name, description, price}) => {
                     <Card.Text>
                     {description}<br />
                     {price}
+                    {stock}
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>

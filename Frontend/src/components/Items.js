@@ -6,7 +6,7 @@ export default function Items() {
     const[item, setItem] = useState({})
 
     useEffect(() => {
-        fetch("/item")
+        fetch("http://localhost:3001/items")
         .then(res => res.json())
         .then(item => setItem(item))
     }, [])
@@ -14,7 +14,7 @@ export default function Items() {
     return (
         <div>
             <ItemCard 
-            key={item.id} id={item.id} name={item.name} description={item.description} price={item.price}
+            key={item.id} id={item.id} name={item.name} description={item.description} price={item.price} stock={item.stock}
              />                    
         </div>
     )
